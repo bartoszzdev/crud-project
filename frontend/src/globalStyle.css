@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+th,
+td {
+  padding: 0.6rem;
+}
+
+button {
+    padding: 0.8rem 1.7rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
