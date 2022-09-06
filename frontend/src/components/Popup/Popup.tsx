@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Card, ProgressBar } from './styles'
-import { CheckCircle, XCircle, UserCirclePlus } from 'phosphor-react'
+import { CheckCircle, XCircle, NotePencil } from 'phosphor-react'
 import { UserContext } from '../../context/context'
 
 const Popup = () => {
@@ -16,7 +16,7 @@ const Popup = () => {
           setProgress((prevState) => (prevState = 99));
           const element = document.getElementById("myBar");
           if (element) {
-            const definitelyAnElement: HTMLElement | null = element;
+            const definitelyAnElement: HTMLElement = element;
           }
 
           var width = 99;
@@ -59,7 +59,7 @@ const Popup = () => {
       return (
         <Card color="#6200ee">
             <p>Usuário atualizado</p>
-            <UserCirclePlus size={30} weight="fill" color="#6200ee" />
+            <NotePencil size={30} weight="fill" color="#6200ee" />
 
             <ProgressBar id="myBar" color="#6200ee" />
         </Card>

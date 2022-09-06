@@ -25,7 +25,7 @@ import { UserContext } from "./context/context";
 function App() {
   const [users, setUsers] = useState<IUserData[]>([]);
   const [searchUsers, setSearchUsers] = useState("")
-  const { isUserAdded, isUserUpdated, isUserDeleted, setIsUserDeleted } = useContext(UserContext)
+  const { isUserAdded, setIsUserAdded, isUserUpdated, setIsUserUpdated, isUserDeleted, setIsUserDeleted } = useContext(UserContext)
 
   
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
     console.log('Deleted: ', isUserDeleted)
     console.log('Updated: ', isUserUpdated)
     getUsers();
-  }, [isUserAdded, isUserDeleted, isUserUpdated]);
+  }, []);
 
   const getUsers = () => {
     Users.getAllUsers()
@@ -49,6 +49,7 @@ function App() {
     Users.deleteUser(id)
       .then(() => {
         setIsUserDeleted(true)
+        getUsers()
       })
       .catch((e) => {
         console.log(e);
@@ -85,7 +86,7 @@ function App() {
       </Header>
 
       <Main>
-        {users.length == 0 ? (
+        {!users.length ? (
           <EmptyList>
             <FolderNotchOpen size={100} weight="duotone" />
             <h1>Hmm...</h1>

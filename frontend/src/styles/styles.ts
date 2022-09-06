@@ -12,6 +12,10 @@ export const Header = styled.header`
   background: #3700b3;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 824px) {
+    padding: 2rem 10%;
+  }
 `;
 
 export const SearchItem = styled.div`
@@ -38,6 +42,10 @@ export const SearchItem = styled.div`
 
 export const Main = styled.main`
   padding: 2rem 3rem;
+
+  @media (max-width: 824px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 export const Table = styled.table`
@@ -84,12 +92,12 @@ export const EmptyList = styled.div`
 
   h1 {
     margin-top: 45px;
-    font-size: 39px;
+    font-size: 2rem;
     font-weight: bold;
   }
 
   h3 {
     margin-bottom: 40px;
-    font-size: 28px;
+    font-size: 1.3rem;
   }
 `

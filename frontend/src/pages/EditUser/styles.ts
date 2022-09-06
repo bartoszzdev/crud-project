@@ -31,7 +31,7 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: #5f6368;
@@ -52,7 +52,7 @@ export const EditForm = styled.form`
 export const EditInput = styled.input`
   width: 100%;
   padding: 0.8rem 1.7rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #5f6368;
   border: 1px solid #5f6368;
